@@ -5,7 +5,7 @@ import init from './init'
 
 
 const app = function() {
-  document.querySelector('.container').innerHTML = `<h1>${<%= appName %>}</h1>`
+  document.querySelector('.container').innerHTML = `<h1><%= appName %></h1>`
 }
 
 // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..

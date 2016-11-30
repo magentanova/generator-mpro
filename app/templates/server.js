@@ -1,8 +1,5 @@
-global.PROJECT_NAME = <%= appName %>
+const PROJECT_NAME = '<%= appName %>'
 
-if (!global.PROJECT_NAME) { //« set by npm run init-dev »
-	throw new Error('no project name set. did you forget to run "npm run init-dev"?')
-}
 // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x
 
 
@@ -46,7 +43,7 @@ app.set('view engine', 'html');
 // =========
 // DATABASE
 // =========
-connectToDB(<%= appName %>)
+connectToDB(PROJECT_NAME)
 
 // =========
 // APPLICATION MIDDLEWARE 
