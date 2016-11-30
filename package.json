@@ -1,6 +1,6 @@
 {
   "name": "generator-maestro",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "generator for the full-stack Mongo-Express-React-Node framework Maestro",
   "main": "index.js",
   "files": [
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/magentanova/maestro.git"
+    "url": "magentanova/maestro.git"
   },
   "keywords": [
     "yeoman-generator",
