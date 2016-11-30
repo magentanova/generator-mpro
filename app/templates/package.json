@@ -26,27 +26,11 @@
       ]
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/magentanova/tiy-full-stack.git"
-  },
   "keywords": [
     "babel",
     "build",
     "scss",
     "node"
-  ],
-  "author": { 
-    "name" : "Travis Hubbard", 
-    "email" : "t3patterson@gmail.com",
-    "url" : "http://github.com/t3patterson"
-    },
-  "contributors": [
-    {
-      "name": "Justin Richards",
-      "email": "richards.justind@gmail.com",
-      "url": "http://github.com/magentanova"
-    }
   ],
   "license": "MIT",
   "devDependencies": {
