@@ -1,0 +1,36 @@
+{
+  "name": "generator-maestro",
+  "version": "1.0.0",
+  "description": "generator for the full-stack Mongo-Express-React-Node framework Maestro",
+  "main": "index.js",
+  "files": [
+    "app"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magentanova/maestro.git"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "javascript",
+    "node",
+    "express",
+    "mongo",
+    "mongoose",
+    "react",
+    "backbone"
+  ],
+  "author": "justin richards && travis hubbard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magentanova/maestro/issues"
+  },
+  "homepage": "https://github.com/magentanova/maestro#readme",
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "yeoman-generator": "^0.24.1"
+  }
+}
