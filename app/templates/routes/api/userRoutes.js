@@ -1,10 +1,8 @@
 let Router = require('express').Router;
 const apiRouter = Router()
 let helpers = require('../config/helpers.js')
+let User = require('../db/schemas/userSchema.js').User
 
-let User = require('../db/schema.js').User
-
-  
   apiRouter
     .get('/users', function(req, res){
       User.find(req.query , "-password", function(err, results){

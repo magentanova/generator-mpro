@@ -3,7 +3,7 @@ const PROJECT_NAME = '<%= appName %>'
 // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x
 
 
-
+const fs = require('fs');
 const bodyParser = require('body-parser');
 const express = require('express');
 const cookieParser = require('cookie-parser');
@@ -20,7 +20,6 @@ const connectToDB = require('./config/db-setup.js').connectToDB
 // Import Routers
 let indexRouter = require('./routes/indexRouter.js')
 let authRouter = require('./routes/authRouter.js')
-let apiRouter = require('./routes/apiRouter.js')
 
 // Load DB User Model (for appAuthentication configuration)
 let User = require('./db/schema.js').User
@@ -65,7 +64,13 @@ app.use( appMiddleWare.parseQuery )
 
 app.use( '/', indexRouter )
 app.use( '/auth', authRouter )
-app.use( '/api', apiRouter )
+//add all apiRouters as /api middleware
+let apiDir = __dirname + '/routes/api'
+let files = fs.readdirSync(apiDir)
+var routers = files.map(file => require(`${apiDir}/${file}`) );
+routers.forEach(function(router) {
+	app.use ( '/api', router )
+})
 
 app.use(appMiddleWare.errorHandler);
 
