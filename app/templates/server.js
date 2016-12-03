@@ -22,7 +22,7 @@ let indexRouter = require('./routes/indexRouter.js')
 let authRouter = require('./routes/authRouter.js')
 
 // Load DB User Model (for appAuthentication configuration)
-let User = require('./db/schema.js').User
+let User = require('./db/schemas/userSchema.js').User
 
 
 // =========

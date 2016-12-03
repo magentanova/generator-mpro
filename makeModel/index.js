@@ -17,17 +17,19 @@ module.exports = generators.Base.extend({
 		var paths = [
 			{
 				file:'_schema.js',
-				destDir: 'db/schemas'
+				destDir: 'db/schemas',
+				typ: 'Schema'
 			},
 			{
 				file: '_apiRoutes.js',
-				destDir: 'routes/api'
+				destDir: 'routes/api',
+				typ: 'Router'
 			}
 		]
 		paths.forEach((pathObj) => {
 			this.fs.copyTpl(
 				this.templatePath(pathObj.file),
-				this.destinationPath(`${pathObj.destDir}/${this.modelLower}.js`),
+				this.destinationPath(`${pathObj.destDir}/${this.modelLower}${pathObj.typ}.js`),
 				{
 					modelName: this.modelName,
 					modelLower: this.modelLower
