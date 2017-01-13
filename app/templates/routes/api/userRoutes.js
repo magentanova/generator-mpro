@@ -1,6 +1,6 @@
 let Router = require('express').Router;
 const apiRouter = Router()
-let helpers = require('../config/helpers.js')
+let helpers = require('../../config/helpers.js')
 let User = require('../../db/schemas/userSchema.js').User
 
   apiRouter
