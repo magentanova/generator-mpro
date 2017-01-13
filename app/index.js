@@ -35,7 +35,7 @@ module.exports = generators.Base.extend({
 		})
 		this.directory(`${this.sourceRoot()}`,this.appRoot)
 
-		var paths = ['package.json','server.js','README.md','src/scripts/app.js']
+		var paths = ['package.json','server.js','README.md','src/scripts/views/appView.js']
 		paths.forEach(
 			(filepath)=>{
 				this.fs.copyTpl(

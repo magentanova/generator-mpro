@@ -1,7 +1,7 @@
 let Router = require('express').Router;
 const apiRouter = Router()
 let helpers = require('../config/helpers.js')
-let User = require('../db/schemas/userSchema.js').User
+let User = require('../../db/schemas/userSchema.js').User
 
   apiRouter
     .get('/users', function(req, res){

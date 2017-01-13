@@ -1,11 +1,28 @@
+//libraries 
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Backbone from 'backbone'
 import init from './init'
 
+//modules
+import AppView from './views/appView'
 
 const app = function() {
-  document.querySelector('.container').innerHTML = `<h1><%= appName %></h1>`
+  const AppRouter = Backbone.Router.extend({
+  	routes: {
+  		"home": "renderTestView",
+  		"*default": "redirect"
+  	},
+
+  	renderTestView: function() {
+  		ReactDOM.render(<AppView />, document.querySelector('.container'))
+  	},
+
+  	redirect: function() {
+  		location.hash = "home"
+  	}
+  })
+
 }
 
 // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..
