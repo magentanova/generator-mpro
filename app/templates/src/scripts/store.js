@@ -15,7 +15,7 @@ const STORE = _.extend(Backbone.Events,{
 	},
 
 	get: function(key) {
-		return data[key]
+		return this.data[key]
 	},
 
 	set: function(attrs) {
