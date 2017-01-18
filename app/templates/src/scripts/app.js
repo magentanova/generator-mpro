@@ -6,22 +6,41 @@ import init from './init'
 
 //modules
 import AppView from './views/appView'
+import User from './models/userModel'
 
 const app = function() {
   const AppRouter = Backbone.Router.extend({
-  	routes: {
-  		"home": "renderTestView",
-  		"*default": "redirect"
-  	},
+    routes: {
+      "home": "renderTestView",
+      "login": "renderLoginView",
+      "*default": "redirect"
+    },
 
-  	renderTestView: function() {
-  		ReactDOM.render(<AppView />, document.querySelector('.container'))
-  	},
+    renderLoginView: function() {
+      ReactDOM.render(<AppView page="LoginPage" />, document.querySelector('.container'))
+    },
 
-  	redirect: function() {
-  		location.hash = "home"
-  	}
+    renderTestView: function() {
+      ReactDOM.render(<AppView page="HomePage" />, document.querySelector('.container'))
+    },
+
+    redirect: function() {
+      location.hash = "home"
+    },
+
+    initialize: function() {
+      var checkAuth = ()=> {
+        if (!User.getCurrentUser()) {
+          location.hash = 'login'
+        }
+      }
+      checkAuth()
+      this.on('route', checkAuth)
+      Backbone.history.start()
+      console.log(User.getCurrentUser())
+    }
   })
+  new AppRouter
 
 }
 
