@@ -38,7 +38,7 @@ UserAuthModel.login = function(email, password) {
 			password: password
 		}
 	}).then((userData) => {
-		localStorage[app_name + '_user'] = JSON.stringify(userData)
+		localStorage.setItem(app_name + '_user',JSON.stringify(userData))
 		return userData
 	},(err)=> {
 		throw new Error(err.responseText)
@@ -47,14 +47,13 @@ UserAuthModel.login = function(email, password) {
 
 UserAuthModel.logout = function() {
 	return $.getJSON('/auth/logout').then(()=>{
-		localStorage[app_name + '_user'] = null
+		localStorage.removeItem(app_name + '_user')
 	})
 }
 
 UserAuthModel.getCurrentUser = function() {
-	return localStorage[app_name + '_user'] ? JSON.parse(localStorage[app_name + '_user']) : null
+	return localStorage[app_name + '_user'] ? new User(JSON.parse(localStorage[app_name + '_user'])) : null
 }
-
 
 // ..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x
 // ^^ DO NOT TOUCH ^^
