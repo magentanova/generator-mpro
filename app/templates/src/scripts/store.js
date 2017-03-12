@@ -22,6 +22,6 @@ const STORE = _.extend(Backbone.Events,{
 		this.data = _.extend(this.data,attrs)
 		this.emitChange()
 	}
-}
+})
 
 export default STORE	
