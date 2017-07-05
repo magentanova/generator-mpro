@@ -1,6 +1,6 @@
 {
   "name": "generator-mpro",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "description": "pro version of the generator for the full-stack Mongo-Express-React-Node framework Maestro, with rails-like templating and model creation",
   "main": "index.js",
   "files": [
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "magentanova/mpro.git"
+    "url": "git+https://github.com/magentanova/generator-mpro.git" 
   },
   "keywords": [
     "yeoman-generator",
