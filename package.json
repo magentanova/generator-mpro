@@ -1,10 +1,11 @@
 {
   "name": "generator-mpro",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "pro version of the generator for the full-stack Mongo-Express-React-Node framework Maestro, with rails-like templating and model creation",
   "main": "index.js",
   "files": [
-    "app"
+    "generators/app",
+    "generators/makeModel"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,9 +27,9 @@
   "author": "justin richards && travis hubbard",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/magentanova/mpro/issues"
+    "url": "https://github.com/magentanova/generator-mpro/issues"
   },
-  "homepage": "https://github.com/magentanova/mpro#readme",
+  "homepage": "https://github.com/magentanova/generator-mpro.git#readme",
   "dependencies": {
     "mkdirp": "^0.5.1",
     "yeoman-generator": "^0.24.1"
