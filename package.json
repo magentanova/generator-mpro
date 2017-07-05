@@ -1,6 +1,6 @@
 {
   "name": "generator-mpro",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "pro version of the generator for the full-stack Mongo-Express-React-Node framework Maestro, with rails-like templating and model creation",
   "main": "index.js",
   "files": [
